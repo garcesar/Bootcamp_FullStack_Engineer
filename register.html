@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/icono.png" type="image/x-icon"/>
+    <title>Registro</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/c62396a6ca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <input type="checkbox" id="burguer" class="input-burger">
+        <label class="burguer-container" for="burguer">
+            <div class="burguer"></div>
+        </label>
+
+        <div class="header-img">
+            <a href="index.html"><img class="nav-logo" src="/assets/images/logo.png" alt="servicesuy-logo"></a>
+        </div>
+
+        <nav class="navbar-header navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-item">
+                        <li><a href="/index.html">Principal</a></li>
+                        <li><a href="/register.html">Registro</a></li>
+                        <li><a href="/contact.html">Contacto</a></li>
+                        <li><a href="/about.html">Acerca de nosotros</a></li>
+                        <li><a href="/admin-products.html">Admin Productos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="user-info">
+            <div class="cart-container">
+                <img class="cart-picture" src="/assets/images/cart.png" alt="cart-img"></img>
+            </div>
+            <div class="avatar-container">
+                <img class="user-picture" src="/assets/images/user.png" alt="user-img"></img>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="register-section">
+            <h2>Registro de Usuario</h2>
+            <form action="/submit-registration" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="full-name">Nombre completo *</label>
+                    <input type="text" id="full-name" name="full-name" required minlength="3" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" required maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña *</label>
+                    <input type="password" id="password" name="password" required minlength="8" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Repetir contraseña *</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required minlength="8" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Fecha de nacimiento *</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Provincia *</label>
+                    <select id="country" name="country" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="montevideo">Montevideo</option>
+                        <option value="canelones">Canelones</option>
+                        <option value="maldonado">Maldonado</option>
+                        <option value="colonia">Colonia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="image">Imagen</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="observations">Comentarios</label>
+                    <textarea id="observations" name="observations" maxlength="500" rows="4" placeholder="Escribe tus comentarios aquí..."></textarea>
+                </div>
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <h3>Social Media</h3>
+                <a href="#whatsapp"><img class="social-img" src="/assets/images/icons/whatsapp.png" alt="whatsapp"></a>
+                <a href="#facebook"><img class="social-img" src="/assets/images/icons/facebook.png" alt="facebook"></a>
+                <a href="#instagram"><img class="social-img" src="/assets/images/icons/instagram.png" alt="instagram"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contactacnos</h3>
+                <p>Email: contact@servicesuy.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Main Street, Anytown, USA</p>
+            </div>
+            <div class="footer-map">
+                <h3>Nuestra ubicación</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153169!3d-37.8162797797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1b6c5b0a1e7!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1611819392743!5m2!1sen!2sau"
+                    width="100%"
+                    height="200"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 César García Entregable. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
